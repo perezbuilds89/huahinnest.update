@@ -1,402 +1,893 @@
 <!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HuaHinNest – Din svenska kontakt i Hua Hin</title>
-  <meta name="description" content="En svensk kontakt på plats i Hua Hin. Personlig vägledning för dig som funderar på att flytta, hyra eller köpa bostad i Thailand. Kostnadsfritt för dig som söker.">
-  <meta name="author" content="HuaHinNest">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HuaHinNest – Din svenska kontakt i Hua Hin</title>
+<meta name="description" content="En svensk kontakt på plats i Hua Hin. Personlig vägledning för dig som funderar på att flytta, hyra eller köpa bostad i Thailand. Kostnadsfritt för dig som söker.">
+<meta name="author" content="HuaHinNest">
+<link rel="canonical" href="https://huahinnest.onrender.com/">
+<meta property="og:title" content="HuaHinNest – Din svenska kontakt i Hua Hin">
+<meta property="og:description" content="En svensk kontakt på plats i Hua Hin. Personlig vägledning för dig som funderar på att flytta, hyra eller köpa bostad i Thailand. Kostnadsfritt för dig som söker.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://huahinnest.onrender.com/">
+<meta property="og:image" content="https://huahinnest.onrender.com/img/hero-horse-beach.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://huahinnest.onrender.com/img/hero-horse-beach.jpg">
+<link rel="icon" href="/img/logo-emblem.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700&family=Allura&family=Cinzel:wght@500&display=swap">
+<style>
+/* Layout: helsidesscener i lager, glasig header som alltid syns, scrollstyrda kapitel. Fraunces för rubriker, Manrope för brödtext, havsgrön accent från HuaHinNest. */
+:root{
+  --bg:#f7f3ec; --sand:#ece2d2; --card:#fffdf9; --ink:#2b231e; --muted:#6c5f55; --line:#ddd0bd;
+  --accent:#2f6a6e; --accent-ink:#ffffff; --sun:#e98b5e; --glass:rgba(255,252,247,.62); --glass-line:rgba(43,35,30,.12);
+  --shadow:0 24px 60px -24px rgba(43,35,30,.35);
+  --mask-filter:none;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hh:72px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13100e; --sand:#1d1814; --card:#1b1714; --ink:#f3ebe0; --muted:#b5a696; --line:#3a312a;
+  --accent:#7cc4bf; --accent-ink:#0f2526; --sun:#f0a07a; --glass:rgba(24,20,17,.6); --glass-line:rgba(243,235,224,.12);
+  --shadow:0 24px 60px -24px rgba(0,0,0,.7); --mask-filter:brightness(1.35) saturate(1.15); color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#13100e; --sand:#1d1814; --card:#1b1714; --ink:#f3ebe0; --muted:#b5a696; --line:#3a312a;
+  --accent:#7cc4bf; --accent-ink:#0f2526; --sun:#f0a07a; --glass:rgba(24,20,17,.6); --glass-line:rgba(243,235,224,.12);
+  --shadow:0 24px 60px -24px rgba(0,0,0,.7); --mask-filter:brightness(1.35) saturate(1.15); color-scheme:dark;}
 
-  <meta property="og:title" content="HuaHinNest – Din svenska kontakt i Hua Hin">
-  <meta property="og:description" content="En svensk kontakt på plats i Hua Hin. Personlig vägledning för dig som funderar på att flytta, hyra eller köpa bostad i Thailand. Kostnadsfritt för dig som söker.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://huahinnest.onrender.com/hero-horse-beach..jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://huahinnest.onrender.com/hero-horse-beach..jpg">
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--glass)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;border:0;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 12px 30px -12px var(--accent)}
+.btn-ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn svg{width:18px;height:18px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
+/* Header */
+.hdr{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px));padding-block:12px}
+.hdr-in{max-width:1220px;margin:0 auto;height:56px;display:flex;align-items:center;gap:18px;padding:0 10px 0 18px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 10px 30px -20px rgba(0,0,0,.45)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Cinzel",var(--display);font-weight:500;font-size:21px;letter-spacing:.05em;white-space:nowrap;color:var(--ink)}
+.brand .emblem{width:38px;height:38px;flex:0 0 38px;color:var(--gold)}
+.brand .emblem path{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 1.6s calc(.2s + var(--i)*.09s) cubic-bezier(.6,0,.2,1) forwards}
+.brand .emblem .moon{opacity:0;animation:fadein .8s 1.4s forwards}
+@keyframes fadein{to{opacity:1}}
+:root{--gold:#a07a34}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--gold:#d9b56c}}
+:root[data-theme="dark"]{--gold:#d9b56c}
+@keyframes draw{to{stroke-dashoffset:0}}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{font-size:15px;font-weight:600;text-decoration:none;padding:9px 12px;border-radius:10px;transition:background .2s}
+.nav a:hover{background:var(--glass-line)}
+.hdr-tools{display:flex;gap:8px;align-items:center}
+.icon-btn{height:42px;min-width:42px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;border:1px solid var(--glass-line);background:transparent;color:inherit;font:600 14px var(--body);cursor:pointer}
+.icon-btn svg{width:18px;height:18px}
+.wa-btn{height:42px;padding:0 16px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center}
+.menu-btn{display:none}
+.progress{position:absolute;left:24px;right:24px;bottom:10px;height:2px;border-radius:2px;overflow:hidden;pointer-events:none}
+.progress i{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
+.mnav{display:none}
+@media (max-width:980px){
+  .nav{display:none}.menu-btn{display:inline-flex}.wa-btn{display:none}.hdr-tools{margin-left:auto}
+  .mnav{position:absolute;top:76px;left:max(14px,env(safe-area-inset-left,0px));right:max(14px,env(safe-area-inset-right,0px));flex-direction:column;padding:10px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+  .mnav.open{display:flex}
+  .mnav a{padding:14px 12px;font-size:18px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--glass-line)}
+  .mnav a:last-child{border:0;color:var(--accent)}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:420px){
+  .hdr{padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px))}
+  .hdr-in{gap:8px;padding:0 8px 0 12px}
+  .brand{font-size:17px;gap:7px;letter-spacing:.03em}.brand .emblem{width:32px;height:32px;flex-basis:32px}
+  #themeLabel{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  #theme{width:44px;height:44px;padding:0}
+  .menu-btn{height:44px;padding:0 12px}
+  .hdr-tools{gap:6px}
+}
+
+/* Hero */
+.hero{position:relative;min-height:max(640px,92svh);display:flex;align-items:flex-end;overflow:hidden;color:#fff8ee;isolation:isolate}
+.scene{position:absolute;inset:-6% -4% 0;z-index:-2}
+.scene{will-change:transform}
+.scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 55%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.14) translateX(-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,14,12,.8) 0%,rgba(20,14,12,.48) 48%,rgba(20,14,12,0) 78%),linear-gradient(0deg,rgba(20,14,12,.6),transparent 45%)}
+.hero-in{width:100%;padding-top:140px;padding-bottom:110px}
+.hero .eyebrow{color:#ffd9b0;min-height:1.6em}
+.caret{display:inline-block;width:2px;height:1em;background:currentColor;vertical-align:-2px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.6rem);max-width:12ch;margin-top:18px;font-weight:400}
+.hero h1 em{font-weight:300;color:#ffd9b0}
+.w{display:inline-block;opacity:0;transform:translateY(40%) rotate(4deg);filter:blur(6px);animation:word .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes word{to{opacity:1;transform:none;filter:none}}
+.hero .lead{max-width:34rem;margin-top:22px;font-size:18px;color:rgba(255,248,238,.88)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero .btn-primary{background:#fff8ee;color:#2b231e;box-shadow:0 14px 34px -14px rgba(0,0,0,.6)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff8ee;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.08em}
+.scroll-cue span{width:28px;height:44px;border:2px solid currentColor;border-radius:16px;position:relative}
+.scroll-cue span::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:currentColor;animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(16px)}}
+.shimmer rect{animation:shim 3.5s ease-in-out infinite}
+.shimmer rect:nth-child(2n){animation-delay:1.1s}.shimmer rect:nth-child(3n){animation-delay:2s}
+@keyframes shim{0%,100%{opacity:.15}50%{opacity:.85}}
+
+/* Trust: svävande glaskort som överlappar heron, ikoner som ritar sig själva */
+.hero-in{padding-bottom:170px}
+.scroll-cue{bottom:96px}
+.trust{position:relative;z-index:5;margin-top:-72px}
+.trust-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tcard{display:flex;align-items:center;gap:14px;padding:18px 18px;border-radius:22px;background:color-mix(in srgb,var(--card) 78%,transparent);border:1px solid var(--glass-line);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);box-shadow:var(--shadow);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.tcard:hover,.js .tcard.rv.in:hover{transform:translateY(-6px);transition-duration:.35s;box-shadow:0 30px 60px -24px rgba(43,35,30,.45)}
+.ticon{flex:0 0 52px;height:52px;border-radius:16px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.ticon svg{width:28px;height:28px}
+.ticon path,.ticon rect,.ticon circle,.ticon polyline{stroke-dasharray:90;stroke-dashoffset:90;transition:stroke-dashoffset 1.6s cubic-bezier(.6,0,.2,1)}
+.tcard.in .ticon path,.tcard.in .ticon rect,.tcard.in .ticon circle,.tcard.in .ticon polyline{stroke-dashoffset:0}
+.tcard:nth-child(2) .ticon *{transition-delay:.25s}.tcard:nth-child(3) .ticon *{transition-delay:.5s}.tcard:nth-child(4) .ticon *{transition-delay:.75s}
+.tcard b{display:block;font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15}
+.tcard span{display:block;margin-top:3px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);line-height:1.35}
+@media (max-width:980px){.trust-in{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){
+  .hero-in{padding-bottom:120px}.scroll-cue{display:none}
+  .trust{margin-top:-56px}.trust-in{gap:10px}
+  .tcard{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}
+  .ticon{flex-basis:auto;width:42px;height:42px;border-radius:13px}.ticon svg{width:24px;height:24px}
+  .tcard b{font-size:19px}.tcard span{font-size:11.5px}
+}
+
+/* Om Cristian */
+.sec{padding-block:clamp(80px,12vw,150px)}
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,90px);align-items:center}
+.portrait{aspect-ratio:678/900;max-width:100%;border-radius:28px;position:relative;overflow:hidden;background:linear-gradient(160deg,#f2b27d,#d9775a 45%,#3e5d73);clip-path:circle(18% at 50% 50%);transition:clip-path 1.4s cubic-bezier(.7,0,.2,1)}
+.portrait.in{clip-path:circle(80% at 50% 50%)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.about h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin-top:14px}
+.about .body{margin-top:24px;display:grid;gap:14px;font-size:18px;color:var(--muted);max-width:34rem}
+.about .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+@media (max-width:820px){.about{grid-template-columns:1fr}.portrait{max-width:420px}}
+/* Om Cristian: varm solnedgångsbakgrund, text som fylls i, namnteckning, siffror */
+:root{--om-faint:rgba(43,35,30,.16);--om-sig:#c4643c;--om-bg:radial-gradient(circle at 88% 12%,rgba(47,106,110,.18),transparent 45%),radial-gradient(circle at 8% 92%,rgba(233,139,94,.3),transparent 50%),linear-gradient(160deg,#fbf1e6,#f3dcc6)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--om-faint:rgba(243,235,224,.16);--om-sig:#f0a07a;--om-bg:radial-gradient(circle at 88% 12%,rgba(124,196,191,.2),transparent 45%),radial-gradient(circle at 8% 92%,rgba(240,160,122,.18),transparent 50%),linear-gradient(160deg,#16110e,#10201f)}}
+:root[data-theme="dark"]{--om-faint:rgba(243,235,224,.16);--om-sig:#f0a07a;--om-bg:radial-gradient(circle at 88% 12%,rgba(124,196,191,.2),transparent 45%),radial-gradient(circle at 8% 92%,rgba(240,160,122,.18),transparent 50%),linear-gradient(160deg,#16110e,#10201f)}
+#om{background:var(--om-bg);position:relative;padding-bottom:clamp(36px,4vw,48px)}
+.about .body{color:var(--ink)}
+.rw{color:var(--om-faint);transition:color .35s}
+.rw.on{color:var(--ink)}
+.sig{display:block;width:min(300px,80%);height:auto;margin-top:18px;overflow:visible}
+.sig text{font-family:Allura,"Snell Roundhand",cursive;font-size:60px;fill:var(--om-sig);fill-opacity:0;stroke:var(--om-sig);stroke-width:1.1;stroke-dasharray:900;stroke-dashoffset:900}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;max-width:34rem}
+.stat-c{padding:16px;border-radius:18px;background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--glass-line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.stat-c b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,36px);line-height:1;color:var(--accent)}
+.stat-c small{display:block;margin-top:6px;font-size:13px;line-height:1.35;color:var(--muted)}
+.stat-c b{white-space:nowrap}
+@media (max-width:420px){.stats{gap:8px}.stat-c{padding:12px 10px}.stat-c b{font-size:24px}.stat-c small{font-size:12px}}
+
+/* Pussel / text mask */
+.puzzle{position:relative;height:340vh;background:var(--bg)}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;perspective:1100px}
+.mask-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,9.2vw,9rem);line-height:.98;letter-spacing:-.025em;text-align:center;transform-origin:50% 40%;filter:var(--mask-filter)}
+.mask-text span{display:block}
+.tiles{position:absolute;inset:0;transform-style:preserve-3d}
+.tile{position:absolute;background-repeat:no-repeat;will-change:transform,opacity;backface-visibility:hidden}
+.puzzle .eyebrow{position:absolute;top:calc(var(--hh) + 34px);left:0;right:0;text-align:center;z-index:2;opacity:0;transition:opacity .4s}
+.facts{position:absolute;left:0;right:0;bottom:max(34px,6vh);z-index:3}
+.facts-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fact{padding:18px 18px 16px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow);opacity:0;transform:translateX(-120px)}
+@media (max-width:820px){.fact{transform:translateY(60px)}}
+.fact b{display:block;font-family:var(--display);font-weight:600;font-size:20px;line-height:1.2}
+.fact span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}
+.fact svg{width:26px;height:26px;color:var(--accent);margin-bottom:10px}
+.puzzle-hint{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-size:13px;font-weight:600;color:#fff8ee;z-index:4;letter-spacing:.06em;text-shadow:0 2px 12px rgba(0,0,0,.5);transition:opacity .3s}
+@media (max-width:820px){.facts-in{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.fact{padding:12px}.fact b{font-size:16px}.fact span{font-size:12.5px}.fact svg{display:none}}
+
+/* Bento */
+/* Bento: bild överst, text under bilden i ett kort */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:44px}
+.tilebx{position:relative;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:0 18px 40px -30px rgba(43,35,30,.5)}
+.tilebx .ph{position:relative;flex:1 1 auto;min-height:190px;overflow:hidden;background:var(--sand)}
+.tilebx img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.tilebx:hover img,.tilebx:focus-visible img{transform:scale(1.08)}
+.tilebx .cap{padding:16px 20px 20px}
+.tilebx .cap b{display:block;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2}
+.tilebx .cap span{display:block;margin-top:4px;font-size:15px;line-height:1.5;color:var(--muted)}
+.b1{grid-column:span 4;grid-row:span 2}.b1 .ph{min-height:420px}.b2,.b3,.b4,.b5,.b6{grid-column:span 2}.b3 .ph{min-height:200px}.b4 .ph,.b5 .ph,.b6 .ph{min-height:230px}
+.b1 img{object-position:50% 85%}
+.b7{grid-column:1/-1}.b7 .ph{flex:none;min-height:0;aspect-ratio:2/1}
+.tilebx .credit{display:block;margin-top:6px;font-size:12px;color:var(--muted);opacity:.8}
+.stat{display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:24px;background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.stat b{font-family:var(--display);font-size:clamp(3rem,6vw,4.6rem);font-weight:300;line-height:1}
+.stat span{font-size:16px;font-weight:600;line-height:1.45}
+.stat small{display:block;margin-top:10px;font-size:14px;font-weight:500;opacity:.85;line-height:1.5}
+@media (max-width:820px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.b1,.b2,.b7{grid-column:span 2}.b1{grid-row:auto}.b1 .ph{min-height:340px}.b3,.b4,.b5,.b6{grid-column:span 1}}
+@media (max-width:600px){.bento{grid-template-columns:1fr;gap:14px}.b1,.b2,.b3,.b4,.b5,.b6{grid-column:auto}.tilebx .ph,.b1 .ph,.b3 .ph,.b4 .ph,.b5 .ph,.b6 .ph{min-height:0;flex:none;aspect-ratio:4/3}.b1 .ph{aspect-ratio:4/5}}
+
+/* Kunskapsbank */
+.kb{position:relative;background:var(--sand);--kp:0;--deep:#16403f}
+:root[data-theme="dark"] .kb{--deep:#0d2a2a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kb{--deep:#0d2a2a}}
+.kb-stage{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-top:var(--hh);isolation:isolate}
+/* Bakgrundslager: färgbyte, blobbar, korn och konturtext */
+.kb-deep{position:absolute;inset:0;z-index:-4;background:var(--deep);opacity:var(--kp)}
+.kb-blob{position:absolute;z-index:-3;border-radius:42% 58% 63% 37%/45% 38% 62% 55%;filter:blur(50px);animation:pmorph 16s ease-in-out infinite;pointer-events:none;opacity:calc(.3 + var(--kp)*.4)}
+.kb-blob.a{width:460px;height:460px;left:-140px;top:-100px;background:#e98b5e}
+.kb-blob.b{width:520px;height:520px;right:-160px;bottom:-200px;background:#2f9a96;animation-delay:-6s;animation-duration:19s}
+.kb-blob.c{width:300px;height:300px;left:45%;top:35%;background:#f2c46d;opacity:calc(.12 + var(--kp)*.25);animation-delay:-10s}
+.kb-grain{position:absolute;inset:0;z-index:-2;opacity:.13;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.kb-big{position:absolute;left:0;top:calc(var(--hh) + 6vh);z-index:-1;white-space:nowrap;font-family:var(--display);font-weight:300;font-size:clamp(110px,18vw,260px);line-height:1;color:transparent;-webkit-text-stroke:1.5px currentColor;opacity:.16;pointer-events:none;will-change:transform}
+.kb .kb-head,.kb .kb-foot,.kb .kb-head p,.kb .eyebrow{transition:color .6s}
+.kb.deep{color:#f3ebe0}
+.kb.deep .kb-head p,.kb.deep .kb-foot{color:rgba(243,235,224,.78)}
+.kb.deep .eyebrow{color:#9fe1cb}
+.kb-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px}
+.kb-head h2{font-size:clamp(2.2rem,5vw,4rem);max-width:14ch;margin-top:10px}
+.kb-head p{max-width:24rem;color:var(--muted)}
+.track{display:flex;gap:24px;margin-top:40px;padding-left:max(20px,calc((100vw - 1180px)/2 + 20px));padding-right:60px;will-change:transform}
+.kcard{flex:0 0 340px;height:420px;perspective:1200px}
+.kflip{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.3,1.3,.5,1)}
+.kcard.flipped .kflip{transform:rotateY(180deg)}
+.ktilt{width:100%;height:100%;transform-style:preserve-3d;transition:transform .15s}
+.face{position:absolute;inset:0;border-radius:26px;padding:28px;display:flex;flex-direction:column;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+.face::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.35),transparent 45%);opacity:var(--go,0);pointer-events:none;transition:opacity .3s}
+.back{transform:rotateY(180deg);background:var(--c,var(--accent));color:#fff;border-color:transparent}
+.kcard .front{color:var(--ink);box-shadow:0 30px 60px -28px rgba(0,0,0,.55)}
+.ktop{display:flex;justify-content:space-between;align-items:flex-start}
+.kicon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 16%,transparent);color:var(--c);transform:translateZ(30px)}
+.kicon svg{width:24px;height:24px}
+.knum{font-family:var(--display);font-size:64px;font-weight:300;line-height:1;color:var(--c,var(--accent));opacity:.9;transform:translateZ(40px)}
+.kmeta{display:flex;gap:10px;align-items:center;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.kmeta i{width:4px;height:4px;border-radius:50%;background:currentColor}
+.face h3{font-size:27px;margin-top:10px}
+.face p{margin-top:10px;color:var(--muted);font-size:15.5px}
+.back p{color:inherit;opacity:.85}
+.back ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px}
+.back li{display:flex;gap:10px;font-size:16px;line-height:1.45}
+.back li::before{content:"";flex:0 0 16px;height:2px;margin-top:11px;background:currentColor}
+.kbtns{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.flip-btn{min-height:46px;padding:0 18px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;font:600 15px var(--body);cursor:pointer}
+.back .read{min-height:46px;padding:0 18px;border-radius:999px;background:#fff;color:var(--c,var(--accent));font-weight:700;font-size:15px;display:inline-flex;align-items:center;text-decoration:none}
+.kb-foot{margin-top:26px;font-size:14px;color:var(--muted)}
+@media (max-width:820px){
+  .kb{height:auto!important}.kb-stage{position:relative;height:auto;padding-block:90px}
+  .kb-big{top:60px}
+  .track{flex-direction:column;transform:none!important;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .kcard{flex:none;width:100%;height:auto}
+  .kflip{display:grid;height:auto}.ktilt{height:auto}
+  .face{position:relative;inset:auto;grid-area:1/1;padding:24px}
+  .kbtns{padding-top:22px}
+  .knum{font-size:52px}
+}
+
+/* Process */
+.proc{position:relative;margin-top:60px}
+.proc svg{position:absolute;left:0;right:0;top:34px;width:100%;height:60px;overflow:visible}
+.proc path{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round}
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.step .dot{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--accent);font-family:var(--display);font-size:24px;color:var(--accent);transition:transform .4s,background .4s,color .4s}
+.step.on .dot{background:var(--accent);color:var(--accent-ink);transform:scale(1.08)}
+.step h3{font-size:26px;margin-top:20px}
+.step p{margin-top:6px;color:var(--muted)}
+.center{text-align:center}
+.center h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-top:12px}
+.center .sub{max-width:38rem;margin:18px auto 0;color:var(--muted);font-size:18px}
+@media (max-width:760px){.steps{grid-template-columns:1fr;gap:34px}.proc svg{display:none}}
+
+/* WhatsApp-chatt i en mobil */
+.phone{--wa-bg:#efe7dc;--wa-in:#ffffff;--wa-out:#d9fdd3;--wa-ink:#111b21;--wa-sub:#667781;--wa-top:#2f6a6e;
+  position:relative;z-index:3;width:min(330px,100%);margin:0 auto;padding:12px;border-radius:46px;background:#1d1a18;box-shadow:0 40px 80px -30px rgba(43,35,30,.55),inset 0 0 0 2px #3a3430;transform:rotate(-2deg);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.phone.in{transform:rotate(0)}
+:root[data-theme="dark"] .phone{--wa-bg:#0b141a;--wa-in:#202c33;--wa-out:#005c4b;--wa-ink:#e9edef;--wa-sub:#8696a0;--wa-top:#1f2c33}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .phone{--wa-bg:#0b141a;--wa-in:#202c33;--wa-out:#005c4b;--wa-ink:#e9edef;--wa-sub:#8696a0;--wa-top:#1f2c33}}
+.screen{position:relative;border-radius:36px;overflow:hidden;background:var(--wa-bg);height:540px;display:flex;flex-direction:column}
+.notch{position:absolute;top:8px;left:50%;width:96px;height:24px;margin-left:-48px;border-radius:14px;background:#1d1a18;z-index:2}
+.wa-top{display:flex;align-items:center;gap:10px;padding:42px 14px 12px;background:var(--wa-top);color:#fff}
+.wa-top img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:35% 30%}
+.wa-top b{display:block;font-size:15px;line-height:1.2}
+.wa-top small{font-size:12px;opacity:.8}
+.chat{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:14px 12px 16px;overflow:hidden}
+.msg{max-width:84%;padding:8px 11px 6px;border-radius:12px;font-size:14.5px;line-height:1.42;color:var(--wa-ink);background:var(--wa-in);box-shadow:0 1px .5px rgba(11,20,26,.13);opacity:0;transform:translateY(14px) scale(.96);transform-origin:left bottom;transition:opacity .45s,transform .45s cubic-bezier(.2,1.2,.4,1);text-align:left}
+.msg.me{align-self:flex-end;background:var(--wa-out);transform-origin:right bottom;border-top-right-radius:4px}
+.msg:not(.me){border-top-left-radius:4px}
+.msg time{display:block;text-align:right;font-size:11px;color:var(--wa-sub);margin-top:2px}
+.msg.show{opacity:1;transform:none}
+.msg.gone{display:none}
+.typing{align-self:flex-start;display:none;gap:4px;padding:12px 14px;border-radius:12px;background:var(--wa-in)}
+.typing.me{align-self:flex-end;background:var(--wa-out)}
+.typing.on{display:flex}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--wa-sub);animation:dot 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.replay{display:block;margin:16px auto 0;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--muted);font:600 14px var(--body);cursor:pointer}
+/* Scenen runt mobilen: blobbar, prickmönster, svävande glaskort och bostadsförslag */
+#process{overflow-x:clip}
+.pscene{position:relative;max-width:1000px;margin:54px auto 0;padding:56px 0 64px;isolation:isolate}
+.pscene::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle,color-mix(in srgb,var(--accent) 35%,transparent) 1.4px,transparent 1.6px);background-size:22px 22px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 50%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 60% 55% at 50% 50%,#000 20%,transparent 75%);opacity:.55}
+.pblob{position:absolute;z-index:-1;border-radius:42% 58% 63% 37%/45% 38% 62% 55%;filter:blur(40px);opacity:.55;animation:pmorph 16s ease-in-out infinite;pointer-events:none}
+.pblob.a{width:420px;height:420px;left:calc(50% - 360px);top:6%;background:radial-gradient(circle at 35% 35%,#e98b5e,#f2b27d 55%,transparent 72%)}
+.pblob.b{width:460px;height:460px;left:calc(50% - 40px);top:28%;background:radial-gradient(circle at 60% 40%,#2f9a96,#2f6a6e 55%,transparent 72%);animation-delay:-6s;animation-duration:19s}
+.pblob.c{width:260px;height:260px;left:calc(50% + 150px);top:-4%;background:radial-gradient(circle,#ffd9b0,transparent 70%);animation-delay:-3s;opacity:.7}
+@keyframes pmorph{0%,100%{border-radius:42% 58% 63% 37%/45% 38% 62% 55%;transform:translate(0,0) rotate(0)}50%{border-radius:61% 39% 35% 65%/58% 62% 38% 42%;transform:translate(24px,-18px) rotate(35deg)}}
+.ring{position:absolute;z-index:0;left:50%;top:50%;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--accent) 40%,transparent);animation:spin 60s linear infinite;pointer-events:none}
+.ring.r2{width:700px;height:700px;margin:-350px 0 0 -350px;border-style:solid;border-color:color-mix(in srgb,var(--sun) 30%,transparent);animation-direction:reverse;animation-duration:90s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float{position:absolute;z-index:4;will-change:transform}
+.chip,.prop{animation:bob 6s ease-in-out infinite}
+.f2 .chip,.p2 .prop{animation-delay:-2s;animation-duration:7s}.f3 .chip{animation-delay:-4s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.chip{display:flex;align-items:center;gap:10px;padding:12px 16px 12px 12px;border-radius:18px;background:color-mix(in srgb,var(--card) 72%,transparent);border:1px solid var(--glass-line);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:var(--shadow);font-size:14px;line-height:1.3;white-space:nowrap}
+.chip i{flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);font-style:normal;font-size:18px}
+.chip i svg{width:20px;height:20px}
+.chip b{display:block;font-weight:700}
+.chip small{display:block;color:var(--muted);font-size:12.5px}
+.f1{left:6%;top:12%}.f2{right:3%;top:30%}.f3{left:20%;bottom:3%}
+.prop{width:200px;border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 60px -24px rgba(43,35,30,.55)}
+.prop img{display:block;width:100%;height:120px;object-fit:cover}
+.prop div{padding:10px 14px 12px;font-size:13px;color:var(--muted)}
+.prop b{display:block;font-family:var(--display);font-weight:600;font-size:17px;color:var(--ink)}
+.prop em{display:inline-block;margin-top:6px;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-style:normal;font-weight:700;font-size:12px}
+.p1{left:calc(50% - 460px);top:36%}.p2{right:calc(50% - 410px);bottom:8%}
+.fly{opacity:0;transition:opacity .8s,transform 1s cubic-bezier(.2,1.3,.4,1)}
+.p1 .fly{transform:translate(180px,30px) scale(.4)}
+.p2 .fly{transform:translate(-180px,-40px) scale(.4)}
+.pscene.sent .p1 .fly{opacity:1;transform:rotate(-6deg)}
+.pscene.sent .p2 .fly{opacity:1;transform:rotate(5deg);transition-delay:.25s}
+@media (max-width:980px){.p1{left:1%}.p2{right:1%}.f1{left:1%}.f2{right:0}.f3{left:6%}}
+@media (max-width:820px){
+  .pscene{padding:84px 0 200px}
+  .ring{width:380px;height:380px;margin:-190px 0 0 -190px}.ring.r2{width:520px;height:520px;margin:-260px 0 0 -260px}
+  .pblob.a{width:300px;height:300px;left:-60px}.pblob.b{width:320px;height:320px;left:auto;right:-80px}.pblob.c{display:none}
+  .f1{left:50%;top:0;translate:-50% 0}.f2{display:none}.f3{display:none}
+  .p1{left:5%;top:auto;bottom:22px}.p2{right:5%;bottom:4px}
+  .prop{width:150px}.prop img{height:84px}.prop b{font-size:15px}.prop div{padding:8px 10px 10px}
+  .p1 .fly{transform:translate(60px,-120px) scale(.4)}.p2 .fly{transform:translate(-60px,-120px) scale(.4)}
+}
+@media (max-width:420px){.chip{padding:9px 12px 9px 9px;font-size:13px}.chip i{flex-basis:32px;height:32px}.prop{width:140px}}
+@media (prefers-reduced-motion: reduce){.fly{opacity:1!important;transform:none!important}}
+@media (max-width:420px){.screen{height:600px}.msg{font-size:13.5px;max-width:88%}.chat{gap:7px;padding:12px 10px 14px}}
+
+/* Kontakt */
+.contact{background:#2b231e;color:#fff8ee;position:relative;overflow:hidden}
+:root[data-theme="dark"] .contact{background:#0d0b0a}
+.contact-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,6vw,80px);align-items:start}
+.contact h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin-top:12px}
+.contact .eyebrow{color:#ffd9b0}
+.contact .sub{margin-top:18px;color:rgba(255,248,238,.78);font-size:18px}
+.contact .line{margin-top:28px;display:grid;gap:8px;font-size:17px}
+.contact .line b{font-weight:600}
+.contact{isolation:isolate}
+.contact-bg{position:absolute;inset:0;z-index:-2}
+.contact-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,14,12,.88) 0%,rgba(20,14,12,.7) 45%,rgba(20,14,12,.55) 100%),linear-gradient(0deg,rgba(20,14,12,.5),transparent 40%)}
+@media (max-width:820px){.contact::before{background:linear-gradient(180deg,rgba(20,14,12,.82),rgba(20,14,12,.72) 50%,rgba(20,14,12,.86))}}
+.form{padding:30px;border-radius:26px;background:rgba(30,22,18,.42);border:1px solid rgba(255,248,238,.2);backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);box-shadow:0 30px 70px -30px rgba(0,0,0,.7);display:grid;gap:18px}
+@media (max-width:600px){.form{padding:22px}}
+.form label{display:grid;gap:8px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,248,238,.7)}
+.form input,.form textarea{width:100%;font:500 17px var(--body);color:#fff8ee;background:rgba(255,248,238,.06);border:1px solid rgba(255,248,238,.2);border-radius:14px;padding:14px 16px;transition:border-color .2s,background .2s}
+.form input:focus,.form textarea:focus{outline:none;border-color:#ffd9b0;background:rgba(255,248,238,.1)}
+.form .btn-primary{background:#fff8ee;color:#2b231e;justify-self:start}
+.form .ok{font-size:15px;color:#ffd9b0}
+.form .err{font-size:14px;color:#ffb39a}
+.blob{position:absolute;width:520px;height:520px;right:-160px;top:-160px;border-radius:42% 58% 63% 37%/45% 38% 62% 55%;background:radial-gradient(circle at 30% 30%,#e98b5e,#2f6a6e);opacity:.35;filter:blur(2px);animation:morph 14s ease-in-out infinite;pointer-events:none}
+@keyframes morph{50%{border-radius:61% 39% 35% 65%/58% 62% 38% 42%;transform:rotate(30deg)}}
+@media (max-width:820px){.contact-in{grid-template-columns:1fr}}
+
+footer{padding-block:40px;font-size:14px;color:var(--muted)}
+@media (max-width:600px){footer{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--ink)}
+
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 20px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;box-shadow:0 18px 40px -16px rgba(0,0,0,.6);transition:transform .25s}
+.fab:hover{transform:translateY(-3px)}
+.fab{transition:transform .35s,opacity .35s}
+.fab.hide{opacity:0;transform:translateY(24px) scale(.9);pointer-events:none}
+.fab svg{width:22px;height:22px}
+@media (max-width:600px){.fab span{display:none}.fab{width:56px;padding:0;justify-content:center}}
+
+/* Scroll reveal */
+.js .rv{opacity:.12;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+.note{font-size:13px;color:var(--muted);text-align:center;padding-block:14px;border-top:1px solid var(--line)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .w{opacity:1;transform:none;filter:none}
+  .brand .emblem path{stroke-dashoffset:0}.brand .emblem .moon{opacity:1}
+  .puzzle{height:auto}.stage{position:relative;height:auto;min-height:100svh;padding-block:140px 40px}
+  .tiles,.puzzle-hint{display:none}
+  .mask-text{position:relative;inset:auto;min-height:60vh}
+  .puzzle .eyebrow{opacity:1}.facts{position:relative;bottom:auto}.fact{opacity:1;transform:none}
+  .portrait{clip-path:none}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-<main>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header">
-    <div class="wrap site-header__bar">
-      <a href="/" class="brand">
-        <span class="brand__name">HuaHinNest</span>
-        <span class="brand__tag">Svensk kontakt · Hua Hin</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Huvudmeny">
-        <a href="#om">Om Cristian</a>
-        <a href="#varfor">Varför Hua Hin</a>
-        <a href="#process">Så fungerar det</a>
-        <a href="/kunskapsbank/">Kunskapsbank</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-
-      <a href="https://wa.me/66839402162" target="_blank" rel="noopener" class="header-wa">WhatsApp</a>
-
-      <button type="button" class="menu-btn" id="menu-btn" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-menu">
-        <span aria-hidden="true">≡</span>
+<header class="hdr" id="top">
+  <div class="hdr-in">
+    <a class="brand" href="#hem" aria-label="HuaHinNest, till början">
+      <svg class="emblem" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="100" style="--i:0" d="M88.6 39.6A40 40 0 1 1 63.7 12.4"/><path pathLength="100" style="--i:1" d="M68 22h-9M68.5 16.5l-6.5-3.5M69 27.5l-7 4M72.5 31.5l-3.5 6.5M78 33v7.5M83.5 32l3 6"/><path pathLength="100" style="--i:2" d="M44 64h44M60 68h18M66 71.5h8"/><path pathLength="100" style="--i:3" d="M54 64l9-5 4 2 8-5.5 9 8.5"/><path pathLength="100" style="--i:4" d="M40 79c2-14 6-29 13-40"/><path pathLength="100" style="--i:5" d="M53 39c-5-4-12-4-16 0M53 39c-3-6-9-9-15-7M53 39c1-6 6-10 12-10M53 39c5-2 11 0 14 5M53 39c4 2 6 6 6 11M53 39c-4 2-7 6-7 10"/><path pathLength="100" style="--i:6" d="M33 79c-1-10-2-20-1-28"/><path pathLength="100" style="--i:7" d="M32 51c-4-3-9-3-12 0M32 51c-2-4-7-6-11-4M32 51c1-4 5-7 9-6M32 51c4-1 8 1 10 4M32 51c-3 2-5 5-5 8"/><path pathLength="100" style="--i:8" d="M30 79c12-6 26-11 39-6"/><path pathLength="100" style="--i:9" d="M69 73c-4-4 1-11 7-7 3 3 0 7-3 5"/><path pathLength="100" style="--i:10" d="M17 83c15-7 31-4 46 0s24 0 30-7"/><path pathLength="100" style="--i:11" d="M24 89c16-4 31-3 45 0s20-1 23-4"/><path class="moon" d="M80.5 14.5a9 9 0 1 0 6.2 11.6 7 7 0 1 1-6.2-11.6z" fill="currentColor" stroke="none"/></svg>
+      <span>HuaHinNest</span>
+    </a>
+    <nav class="nav" aria-label="Huvudmeny">
+      <a href="#om">Om Cristian</a>
+      <a href="#varfor">Varför Hua Hin</a>
+      <a href="#kunskapsbank">Kunskapsbank</a>
+      <a href="#process">Så fungerar det</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="hdr-tools">
+      <button class="icon-btn" id="theme" type="button" aria-label="Byt mellan ljust och mörkt läge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Mörkt</span>
+      </button>
+      <a class="wa-btn" href="https://wa.me/66839402162" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> Meny
       </button>
     </div>
+    <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobilmeny">
+    <a href="#om">Om Cristian</a><a href="#varfor">Varför Hua Hin</a><a href="#kunskapsbank">Kunskapsbank</a><a href="#process">Så fungerar det</a><a href="#kontakt">Kontakt</a><a href="https://wa.me/66839402162" target="_blank" rel="noopener">Skriv på WhatsApp</a>
+  </nav>
+</header>
 
-    <div class="mobile-menu" id="mobile-menu">
-      <nav aria-label="Mobilmeny">
-        <a href="#om">Om Cristian</a>
-        <a href="#varfor">Varför Hua Hin</a>
-        <a href="#process">Så fungerar det</a>
-        <a href="/kunskapsbank/">Kunskapsbank</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="https://wa.me/66839402162" target="_blank" rel="noopener" class="btn btn--light">Skriv på WhatsApp</a>
-      </nav>
+<main>
+  <section class="hero" id="hem" aria-label="Välkommen">
+    <div class="scene" id="scene" data-d="0.28" data-m="22" aria-hidden="true">
+      <img src="/img/hero-horse-beach.jpg" alt="" fetchpriority="high">
     </div>
-  </header>
+    <div class="wrap hero-in">
+      <p class="eyebrow"><span id="type" data-text="En svensk kontakt i Hua Hin">En svensk kontakt i Hua Hin</span><span class="caret" aria-hidden="true"></span></p>
+      <h1 id="kin">Innan du flyttar, <em>prata med någon</em> som redan bor här.</h1>
+      <p class="lead">Jag heter Cristian. Jag är svensk och bor i Hua Hin. Har du frågor om att hyra, köpa eller flytta hit, hör av dig så pratar vi.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://wa.me/66839402162" target="_blank" rel="noopener">Skriv några rader
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#kunskapsbank">Läs guiderna</a>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#om"><span></span>Scrolla ner</a>
+  </section>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <img class="hero__img" src="/hero-horse-beach..jpg" alt="Häst promeneras längs stranden i Hua Hin med palmer i bakgrunden" fetchpriority="high">
-    <div class="hero__shade"></div>
-    <div class="hero__fade"></div>
-
-    <div class="wrap hero__content">
-      <div class="hero__text">
-        <p class="hero__eyebrow">En svensk kontakt i Hua Hin</p>
-        <h1>
-          Innan du flyttar,<br>
-          <em>prata med någon</em><br>
-          som redan bor här.
-        </h1>
-        <p class="hero__lead">
-          Jag heter Cristian. Jag är svensk och bor i Hua Hin. Har du frågor om att hyra,
-          köpa eller flytta hit, hör av dig så pratar vi.
-        </p>
-        <div class="hero__actions">
-          <a href="https://wa.me/66839402162" target="_blank" rel="noopener" class="btn btn--light">
-            Skriv några rader <span aria-hidden="true">→</span>
-          </a>
-          <a href="mailto:cristian@huahinnest.com?subject=Fr%C3%A5ga%20om%20Hua%20Hin" class="link-underline">eller mejla i lugn takt</a>
-        </div>
+  <section class="trust" aria-label="Därför HuaHinNest">
+    <div class="wrap trust-in">
+      <div class="tcard rv">
+        <div class="ticon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 25V4"/><rect x="6" y="5" width="17" height="12" rx="1.5"/><path d="M12 5v12M6 11h17"/></svg></div>
+        <div><b>Svensk</b><span>på plats i Hua Hin</span></div>
+      </div>
+      <div class="tcard rv">
+        <div class="ticon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="14" r="10.5"/><polyline points="9,14.5 12.5,18 19,10.5"/></svg></div>
+        <div><b>Kostnadsfritt</b><span>för dig som söker</span></div>
+      </div>
+      <div class="tcard rv">
+        <div class="ticon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13 14 4.5 24 13"/><path d="M7 11v12.5h14V11"/><path d="M12 23.5v-6h4v6"/></svg></div>
+        <div><b>Hyra &amp; köpa</b><span>lägenheter och hus</span></div>
+      </div>
+      <div class="tcard rv">
+        <div class="ticon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6.5h18a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H12l-5.5 4.5V19.5H5A1.5 1.5 0 0 1 3.5 18V8A1.5 1.5 0 0 1 5 6.5z"/><path d="M9 11.5h10M9 15h6"/></svg></div>
+        <div><b>Personlig</b><span>kontakt hela vägen</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FÖRTROENDERAD ===================== -->
-  <section class="trust bg-sand">
-    <div class="wrap trust__grid">
-      <div><span class="trust__k">Svensk</span><span class="trust__v">på plats i Hua Hin</span></div>
-      <div><span class="trust__k">Kostnadsfritt</span><span class="trust__v">för dig som söker</span></div>
-      <div><span class="trust__k">Hyra &amp; köpa</span><span class="trust__v">lägenheter och hus</span></div>
-      <div><span class="trust__k">Personlig</span><span class="trust__v">kontakt hela vägen</span></div>
-    </div>
-  </section>
-
-  <!-- ===================== OM CRISTIAN ===================== -->
-  <section id="om" class="wrap section">
-    <div class="grid-12">
-      <div class="col-5">
-        <div class="about__img">
-          <img src="/cristian-portrait..jpg" alt="Cristian, svensk kontakt i Hua Hin, på balkongen med havet i bakgrunden" loading="lazy">
-        </div>
-        <p class="about__caption">Cristian, Hua Hin</p>
+  <section class="sec" id="om">
+    <div class="wrap about">
+      <div class="portrait" id="portrait">
+        <img src="/img/cristian-portrait.jpg" alt="Cristian på balkongen med havet i bakgrunden">
       </div>
-
-      <div class="col-7 about__text">
-        <p class="eyebrow">Om Cristian</p>
-        <h2 class="title">Din svenska kontakt i Hua Hin.</h2>
-        <div class="about__body">
-          <p>Jag är svensk och bor och arbetar i Hua Hin.</p>
-          <p>Jag har daglig kontakt med både svenskar och lokala aktörer.</p>
-          <p>
-            Min roll är inte att sälja en specifik bostad. Min roll är att hjälpa dig förstå
-            dina alternativ och hitta rätt väg genom processen.
-          </p>
-          <p>
-            Mitt mål är att vara den svenska kontakt jag själv hade velat ha om jag skulle
-            flytta till Thailand.
-          </p>
-        </div>
-        <div class="about__actions">
-          <a href="https://wa.me/66839402162" target="_blank" rel="noopener" class="btn btn--ink">Skriv några rader på WhatsApp</a>
-          <a href="mailto:cristian@huahinnest.com" class="link-underline" style="padding: 0.75rem 0;">eller mejla</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== VARFÖR HUA HIN ===================== -->
-  <section id="varfor" class="bg-sand">
-    <div class="wrap section grid-12">
-      <div class="col-5 why__intro">
-        <p class="eyebrow">Varför Hua Hin</p>
-        <h2 class="title">Ett lugnare Thailand, utan att ge upp bekvämligheten.</h2>
-        <p class="lead">
-          Hua Hin har länge varit den thailändska kungafamiljens sommarort. Det märks:
-          mindre trafik, lugnare gator, ett välrenommerat privat sjukhus mitt i stan, och
-          en stad som fungerar året runt, även när regnet kommer.
-        </p>
-      </div>
-
-      <div class="col-7">
-        <div class="why__img">
-          <img src="/lake-restaurant..jpg" alt="Restaurang vid en sjö i Hua Hin i solnedgången" loading="lazy">
-        </div>
-        <div class="facts">
-          <div class="facts__item">
-            <h3>2,5 tim från Bangkok</h3>
-            <p>Bra flygförbindelser och ny motorväg.</p>
-          </div>
-          <div class="facts__item">
-            <h3>Internationellt sjukhus</h3>
-            <p>Bangkok Hospital ligger mitt i stan.</p>
-          </div>
-          <div class="facts__item">
-            <h3>Svensk gemenskap</h3>
-            <p>Etablerad, hjälpsam, inte påträngande.</p>
-          </div>
-          <div class="facts__item">
-            <h3>Fungerar året runt</h3>
-            <p>Ett av de torrare klimaten på kusten.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LIVET HÄR ===================== -->
-  <section class="wrap section">
-    <div class="lifestyle">
-      <div class="lifestyle__text">
-        <p class="eyebrow">Livet här</p>
-        <h2 class="title">Långa stränder.<br>Korta dagar vid skrivbordet.</h2>
-        <p class="lead">
-          De flesta som flyttar hit gör det för rytmen. Morgonpromenad på stranden, lunch
-          under palmerna, eftermiddag i skuggan. Hua Hins kust är öppen, lugn och sällan
-          överfull, inte ens i högsäsong.
-        </p>
-        <p class="lead">Jag visar dig gärna platserna som inte står i guideböckerna.</p>
-      </div>
-      <div class="lifestyle__img">
-        <img src="/palm-beach..jpg" alt="Palmer och vit sandstrand i Hua Hin" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== VARDAGEN ===================== -->
-  <section class="bg-ink">
-    <div class="everyday">
-      <div class="everyday__img">
-        <img src="/fruit-market..jpg" alt="Lokal fruktmarknad i Hua Hin med ananas och bananer" loading="lazy">
-      </div>
-      <div class="everyday__text">
-        <div>
-          <p class="eyebrow eyebrow--light">Vardagen i Hua Hin</p>
-          <h2 class="title">Nybakad ananas för 40 baht.</h2>
-          <p class="lead">
-            Levnadskostnaderna är fortfarande låga, men det är inte därför man stannar.
-            Det är för de små sakerna: marknaden på hörnet, damen som minns din beställning,
-            kvarteret som blir hemma.
-          </p>
-          <ul class="dash-list">
-            <li>Färska råvaror från marknaden, året runt.</li>
-            <li>Varmt och torrt klimat större delen av året.</li>
-            <li>Lägre levnadskostnader än i Sverige.</li>
-            <li>Ett tempo som gör att vardagen får plats.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== BOENDE ===================== -->
-  <section class="wrap section">
-    <div class="grid-12">
-      <div class="col-5">
-        <p class="eyebrow">Boende</p>
-        <h2 class="title">Från takterrass till trädgårdsvilla.</h2>
-        <p class="lead">
-          Att hyra en möblerad lägenhet med pool kan kosta mindre än en etta i Stockholm.
-          Att köpa villa är också möjligt, men reglerna är annorlunda, och det är där de
-          flesta behöver en svensk röst att fråga.
-        </p>
-        <ul class="living-list">
-          <li><span><strong>Hyra long-stay</strong>: färdigmöblerat, allt inkl., från cirka 15 000 baht/mån.</span></li>
-          <li><span><strong>Köpa condo</strong>: utländskt ägande tillåtet, tydligt lagstadgat.</span></li>
-          <li><span><strong>Villa och mark</strong>: kräver rätt struktur. Jag förklarar hur.</span></li>
-        </ul>
-      </div>
-      <div class="col-7">
-        <div class="living-photos">
-          <img src="/condo..jpg" alt="Modern condo i Hua Hin med pool och kvällshimmel" loading="lazy">
-          <img src="/villa-street..jpg" alt="Villakvarter i Hua Hin med palmer" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== OMRÅDET ===================== -->
-  <section id="omrade" class="area">
-    <img class="area__img" src="/nature-mountain..jpg" alt="Naturlandskap utanför Hua Hin med berg i horisonten" loading="lazy">
-    <div class="area__fade"></div>
-    <div class="wrap area__content">
-      <div class="area__text">
-        <p class="eyebrow">Området</p>
-        <h2 class="title">Bortom stranden börjar Thailand på riktigt.</h2>
-        <p class="lead">
-          Bergen, risfälten och nationalparken Kaeng Krachan ligger en kort körning bort.
-          Många upptäcker att det är landskapet runt Hua Hin, inte bara kusten, som gör att
-          man stannar.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SÅ FUNGERAR DET ===================== -->
-  <section id="process" class="bg-sand">
-    <div class="process section">
-      <p class="eyebrow">Så fungerar det</p>
-      <h2 class="title">Enkelt och utan avgifter för dig.</h2>
-      <p class="lead">
-        Tjänsten är helt kostnadsfri för dig som söker bostad. HuaHinNest får ersättning
-        från samarbetande lokala fastighetspartners när en affär är genomförd.
-      </p>
-      <p class="lead">
-        Det betyder att du kan ställa frågor i din egen takt, utan att det kostar något
-        och utan att du binder dig till något.
-      </p>
-      <div class="steps">
-        <div>
-          <div class="steps__n">01</div>
-          <div class="steps__t">Vi pratar</div>
-          <div class="steps__d">På WhatsApp, på svenska.</div>
-        </div>
-        <div>
-          <div class="steps__n">02</div>
-          <div class="steps__t">Jag lyssnar</div>
-          <div class="steps__d">Vad du söker, och varför.</div>
-        </div>
-        <div>
-          <div class="steps__n">03</div>
-          <div class="steps__t">Vi hittar vägen</div>
-          <div class="steps__d">Rätt bostad, rätt struktur.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== KUNSKAPSBANK ===================== -->
-  <section class="wrap section">
-    <div class="kb-head">
       <div>
-        <p class="eyebrow">Kunskapsbank</p>
-        <h2 class="title">Guider på svenska, i lugn takt.</h2>
-      </div>
-      <a href="/kunskapsbank/" class="link-underline">Till Kunskapsbanken →</a>
-    </div>
-
-    <div class="cards">
-      <a href="/kunskapsbank/vad-kostar-det-att-bo-i-hua-hin/" class="card">
-        <div>
-          <span class="card__tag">Guide</span>
-          <h3>Vad kostar det att bo i Hua Hin?</h3>
-          <p>Realistiska månadsbudgetar för olika livsstilar: hyra, mat, el, transport och sjukvård.</p>
+        <p class="eyebrow rv">Om Cristian</p>
+        <h2 class="rv">Din svenska kontakt i Hua Hin.</h2>
+        <div class="body rv">
+          <p>Jag är svensk och bor och arbetar i Hua Hin. Jag har daglig kontakt med både svenskar och lokala aktörer.</p>
+          <p>Mitt mål är att vara den svenska kontakt jag själv hade velat ha om jag skulle flytta till Thailand.</p>
         </div>
-        <span class="card__more">Läs mer →</span>
-      </a>
-      <a href="/kunskapsbank/hyra-langtid-i-hua-hin/" class="card">
-        <div>
-          <span class="card__tag">Guide</span>
-          <h3>Hyra långtid i Hua Hin</h3>
-          <p>Kontrakt, deposition, vad som brukar ingå och vad du ska se upp med.</p>
+        <svg class="sig" id="sig" viewBox="0 0 300 72" role="img" aria-label="Namnteckning: Cristian"><text x="4" y="56">Cristian</text></svg>
+        <div class="stats rv" id="stats">
+          <div class="stat-c"><b><span data-n="3">3</span></b><small>år i Hua Hin</small></div>
+          <div class="stat-c"><b><span data-n="6">6</span></b><small>guider på svenska</small></div>
+          <div class="stat-c"><b><span data-n="100">100</span> %</b><small>personlig kontakt</small></div>
         </div>
-        <span class="card__more">Läs mer →</span>
-      </a>
-       <a href="/kunskapsbank/kopa-bostad-i-thailand/" class="card">
-        <div>
-          <span class="card__tag">Guide</span>
-          <h3>Köpa bostad i Thailand</h3>
-          <p>Vad du som utlänning får äga, hur köpet går till och vilka varningstecken du ska se upp med.</p>
+        <div class="ctas rv">
+          <a class="btn btn-primary" href="https://wa.me/66839402162" target="_blank" rel="noopener">Skriv på WhatsApp</a>
+          <a class="btn btn-ghost" href="#kontakt">Eller skriv här</a>
         </div>
-        <span class="card__more">Läs mer →</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===================== KONTAKT ===================== -->
-  <section id="kontakt" class="bg-ink">
-    <div class="wrap section grid-12">
-      <div class="col-5">
-        <p class="eyebrow eyebrow--light">Berätta vad du söker</p>
-        <h2 class="title">Skriv några rader, så hör jag av mig.</h2>
-        <p class="lead">
-          Jag svarar personligen, oftast samma dag. Det du delar går inte vidare till någon annan.
-        </p>
-        <div class="contact-links">
-          <a href="https://wa.me/66839402162" target="_blank" rel="noopener">
-            <span class="contact-links__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-            </span>
-            <span class="tabular">+66 83 940 2162</span>
-          </a>
-          <a href="mailto:cristian@huahinnest.com">
-            <span class="contact-links__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-            </span>
-            <span>cristian@huahinnest.com</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-7">
-        <form class="form" id="contact-form">
-          <div class="form__field">
-            <label for="f-name">Namn</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Anna Andersson">
-          </div>
-          <div class="form__field">
-            <label for="f-contact">E-post eller WhatsApp</label>
-            <input id="f-contact" name="contact" type="text" required placeholder="anna@exempel.se eller +46 70 …">
-          </div>
-          <div class="form__field">
-            <label for="f-looking">Vad söker du?</label>
-            <textarea id="f-looking" name="looking" rows="4" required placeholder="Ex: Vi funderar på att hyra några månader nästa vinter …"></textarea>
-          </div>
-          <p class="form__note">Några rader räcker. Vi tar resten i samtalet.</p>
-          <button type="submit" class="btn btn--ink" id="form-submit">Skicka via WhatsApp</button>
-        </form>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer>
-    <div class="wrap site-footer">
+  <section class="puzzle" id="varfor" aria-label="Varför Hua Hin">
+    <div class="stage" id="stage">
+      <p class="eyebrow" id="pzEye">Varför Hua Hin</p>
+      <h2 class="mask-text" id="mask"><span>Ett lugnare Thailand,</span><span>utan att ge upp</span><span>bekvämligheten.</span></h2>
+      <div class="tiles" id="tiles" aria-hidden="true"></div>
+      <p class="puzzle-hint" id="pzHint" aria-hidden="true">Fortsätt scrolla</p>
+      <div class="facts">
+        <div class="wrap facts-in">
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 17h18M5 17l2-6h10l2 6M8 11V7h8v4"/></svg><b>2,5 tim från Bangkok</b><span>Flyg och ny motorväg.</span></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 6v12M6 12h12"/><rect x="3" y="3" width="18" height="18" rx="5"/></svg><b>Internationellt sjukhus</b><span>Bangkok Hospital mitt i stan.</span></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 15c3 0 6 1.5 6 4"/></svg><b>Svensk gemenskap</b><span>Hjälpsam, inte påträngande.</span></div>
+          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg><b>Fungerar året runt</b><span>Ett av kustens torrare klimat.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="livet">
+    <div class="wrap">
+      <p class="eyebrow rv">Livet här</p>
+      <h2 id="livet" class="rv" style="font-size:clamp(2.2rem,5vw,4rem);margin-top:12px;max-width:16ch">Långa stränder. Korta dagar vid skrivbordet.</h2>
+      <div class="bento">
+        <article class="tilebx b1 rv" tabindex="0">
+          <div class="ph"><img src="/img/palm-beach.jpg" alt="Palmer och vit sandstrand i Hua Hin" loading="lazy"></div>
+          <div class="cap"><b>Morgonpromenad på stranden</b><span>Hua Hins kust är öppen, lugn och sällan överfull.</span></div>
+        </article>
+        <article class="tilebx b2 stat rv"><b>120 ฿</b><span>för en helt färsk ananas på Dinosaur Market.<small>Tuesday Market är lika omtyckt bland oss som bor här.</small></span></article>
+        <article class="tilebx b3 rv" tabindex="0">
+          <div class="ph"><img src="/img/fruit-market.jpg" alt="Fruktstånd med ananas och bananer" loading="lazy"></div>
+          <div class="cap"><b>Marknaden på hörnet</b><span>Färska råvaror året runt.</span></div>
+        </article>
+        <article class="tilebx b4 rv" tabindex="0">
+          <div class="ph"><img src="/img/condo.jpg" alt="Condo med pool i solnedgången" loading="lazy"></div>
+          <div class="cap"><b>Condo med pool och gym</b><span>Moderna condon med pool, gym och säkerhetsvakt.</span></div>
+        </article>
+        <article class="tilebx b5 rv" tabindex="0">
+          <div class="ph"><img src="/img/villa-street.jpg" alt="Villakvarter med palmer i Hua Hin" loading="lazy"></div>
+          <div class="cap"><b>Lugna villakvarter</b><span>Hus med pool i lugna områden strax utanför stan.</span></div>
+        </article>
+        <article class="tilebx b6 rv" tabindex="0">
+          <div class="ph"><img src="/img/nature-mountain.jpg" alt="Öppet landskap och himmel utanför Hua Hin" loading="lazy"></div>
+          <div class="cap"><b>Bortom stranden</b><span>Natur och öppna landskap, en kort bilresa bort.</span></div>
+        </article>
+        <article class="tilebx b7 rv" tabindex="0">
+          <div class="ph"><img src="/img/seafood.jpg" alt="Grillade räkor, musslor, pilgrimsmusslor, bläckfisk och tom yum på ett bord vid havet" loading="lazy"></div>
+          <div class="cap"><b>Middag vid havet</b><span>Grillade räkor, musslor och tom yum, ofta med fötterna nästan i sanden.</span><small class="credit">Foto: ส่งโลมาหน่อย (Send Your Location)</small></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="kb" id="kunskapsbank" aria-labelledby="kbh">
+    <div class="kb-stage" id="kbStage">
+      <div class="kb-deep" aria-hidden="true"></div>
+      <div class="kb-blob a" aria-hidden="true"></div><div class="kb-blob b" aria-hidden="true"></div><div class="kb-blob c" aria-hidden="true"></div>
+      <div class="kb-grain" aria-hidden="true"></div>
+      <div class="kb-big" id="kbBig" aria-hidden="true">Kunskapsbank · Kunskapsbank</div>
+      <div class="wrap kb-head">
+        <div>
+          <p class="eyebrow">Kunskapsbank</p>
+          <h2 id="kbh">Det jag hade önskat att någon berättade, innan.</h2>
+        </div>
+        <p>Sex guider på svenska, faktagranskade och skrivna av någon som bor här. Vänd korten för att se vad varje guide tar upp.</p>
+      </div>
+      <div class="track" id="track"></div>
+      <p class="wrap kb-foot">Alla guider uppdaterade november 2026.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="process" aria-labelledby="proch">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow rv">Så fungerar det</p>
+        <h2 id="proch" class="rv">Enkelt och utan avgifter för dig.</h2>
+        <p class="sub rv">Tjänsten är kostnadsfri för dig som söker bostad. HuaHinNest får ersättning från samarbetande lokala fastighetspartners när en affär är genomförd.</p>
+      </div>
+      <div class="pscene" id="pscene">
+        <div class="ring" aria-hidden="true"></div><div class="ring r2" aria-hidden="true"></div>
+        <div class="pblob a" aria-hidden="true"></div><div class="pblob b" aria-hidden="true"></div><div class="pblob c" aria-hidden="true"></div>
+        <div class="float f1" data-depth="-0.12"><div class="chip"><i aria-hidden="true">🇸🇪</i><span><b>På svenska</b><small>i din takt</small></span></div></div>
+        <div class="float f2" data-depth="0.1"><div class="chip"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><span><b>Svar oftast samma dag</b><small>personligen, av Cristian</small></span></div></div>
+        <div class="float f3" data-depth="0.16"><div class="chip"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9"/></svg></i><span><b>Kostnadsfritt</b><small>för dig som söker</small></span></div></div>
+        <div class="float p1" data-depth="-0.2" aria-hidden="true"><div class="fly"><div class="prop"><img src="/img/condo.jpg" alt=""><div><b>Condo med pool</b>Gym och havsutsikt<br><em>Förslag 1</em></div></div></div></div>
+        <div class="float p2" data-depth="0.22" aria-hidden="true"><div class="fly"><div class="prop"><img src="/img/villa-street.jpg" alt=""><div><b>Hus med pool</b>Lugnt villakvarter<br><em>Förslag 2</em></div></div></div></div>
+      <div class="phone" id="phone" role="img" aria-label="Exempel på en WhatsApp-konversation mellan en kund och Cristian">
+        <div class="screen" aria-hidden="true">
+          <div class="notch"></div>
+          <div class="wa-top"><img src="/img/cristian-portrait.jpg" alt=""><div><b>Cristian</b><small id="waStatus">online</small></div></div>
+          <div class="chat" id="chat">
+            <div class="msg me">Hej Cristian! Vi är ett par från Göteborg som funderar på att bo i Hua Hin i vinter. Var börjar man?<time>09:12</time></div>
+            <div class="msg">Hej och välkommen! Vad roligt. Hur länge tänker ni stanna, och vill ni bo nära stranden?<time>09:15</time></div>
+            <div class="msg me">Ungefär fem månader. Gärna nära stranden, och helst under 20 000 baht i månaden.<time>09:18</time></div>
+            <div class="msg">Det går bra. Jag skickar några förslag i kväll, så kan vi ringa i morgon om ni vill 😊<time>09:21</time></div>
+            <div class="typing" id="typing"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <button class="replay" id="replay" type="button" hidden>Spela upp chatten igen</button>
+      <div class="proc" id="proc">
+        <svg viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true"><path id="procPath" d="M60 30 C220 -10 330 70 500 30 S780 -10 940 30"/></svg>
+        <div class="steps">
+          <div class="step"><div class="dot">1</div><h3>Vi pratar</h3><p>På WhatsApp, på svenska, i din takt.</p></div>
+          <div class="step"><div class="dot">2</div><h3>Jag lyssnar</h3><p>Vad du söker, och varför.</p></div>
+          <div class="step"><div class="dot">3</div><h3>Vi hittar vägen</h3><p>Rätt bostad, rätt struktur.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact sec" id="kontakt" aria-labelledby="konh">
+    <div class="contact-bg" aria-hidden="true"><img src="/img/station.jpg" alt="" loading="lazy"></div>
+    <div class="wrap contact-in">
       <div>
-        <div class="site-footer__brand">HuaHinNest</div>
-        <div class="site-footer__tag">En svensk kontakt i Hua Hin</div>
+        <p class="eyebrow">Berätta vad du söker</p>
+        <h2 id="konh">Skriv några rader, så hör jag av mig.</h2>
+        <p class="sub">Jag svarar personligen, oftast samma dag.</p>
+        <div class="line"><span>WhatsApp: <b>+66 83 940 2162</b></span></div>
       </div>
-      <div class="site-footer__links">
-        <a href="#om">Om Cristian</a>
-        <a href="/kunskapsbank/">Kunskapsbank</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="https://wa.me/66839402162" target="_blank" rel="noopener">+66 83 940 2162</a>
-      </div>
-      <div class="site-footer__copy">© <span data-year>2026</span> HuaHinNest</div>
+      <form class="form" id="form" novalidate>
+        <label for="f-name">Namn<input id="f-name" name="name" autocomplete="name" placeholder="Anna Andersson"></label>
+        <label for="f-contact">Din e-post eller ditt WhatsApp-nummer<input id="f-contact" name="contact" placeholder="anna@exempel.se eller +46 70 123 45 67"></label>
+        <label for="f-msg">Vad söker du?<textarea id="f-msg" name="msg" rows="4" placeholder="Vi funderar på att hyra några månader nästa vinter"></textarea></label>
+        <p class="err" id="ferr" hidden>Fyll i namn och vad du söker, så kan jag svara dig.</p>
+        <button class="btn btn-primary" type="submit">Skicka via WhatsApp</button>
+        <p class="ok" id="fok" hidden></p>
+      </form>
     </div>
-  </footer>
-
-  <!-- ===================== FLYTANDE WHATSAPP ===================== -->
-  <a href="https://wa.me/66839402162" target="_blank" rel="noopener" class="float-wa" aria-label="Chatta med Cristian på WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-    <span class="float-wa__label">Skriv till Cristian</span>
-  </a>
-
+  </section>
 </main>
-<script src="/js/main.js"></script>
+
+<footer>
+  <div class="wrap"><b>HuaHinNest</b><span>En svensk kontakt i Hua Hin</span><span>© 2026 HuaHinNest</span><span>Webbdesign av Prezz</span></div>
+  <p class="note wrap">Foto på järnvägsstationen: Unsplash.</p>
+</footer>
+
+<a class="fab" href="https://wa.me/66839402162" target="_blank" rel="noopener" aria-label="Chatta med Cristian på WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Skriv till Cristian</span>
+</a>
+
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+  if(!reduce) root.classList.add('js');
+  const clamp = v => Math.max(0, Math.min(1, v));
+  const ease = t => 1 - Math.pow(1 - t, 3);
+
+  /* Ljust / mörkt läge */
+  const themeBtn = document.getElementById('theme'), themeLabel = document.getElementById('themeLabel');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const syncLabel = () => { themeLabel.textContent = isDark() ? 'Ljust' : 'Mörkt'; };
+  try { const s = localStorage.getItem('hhn-theme'); if (s) root.dataset.theme = s; } catch(e){}
+  syncLabel();
+  themeBtn.addEventListener('click', () => {
+    root.dataset.theme = isDark() ? 'light' : 'dark'; syncLabel();
+    try { localStorage.setItem('hhn-theme', root.dataset.theme); } catch(e){}
+  });
+
+  /* Mobilmeny */
+  const menuBtn = document.getElementById('menuBtn'), mnav = document.getElementById('mnav');
+  menuBtn.addEventListener('click', () => { const o = mnav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mnav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+
+  /* Typewriter + kinetisk rubrik */
+  if (!reduce) {
+    const t = document.getElementById('type'), txt = t.dataset.text; t.textContent = ''; let i = 0;
+    const tick = () => { t.textContent = txt.slice(0, ++i); if (i < txt.length) setTimeout(tick, 55); };
+    setTimeout(tick, 500);
+    const h = document.getElementById('kin'); let n = 0;
+    const wrapWords = node => [...node.childNodes].forEach(c => {
+      if (c.nodeType === 3) { const frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(p => { if (!p) return; if (/^\s+$/.test(p)) { frag.append(p); return; }
+          const s = document.createElement('span'); s.className = 'w'; s.style.animationDelay = (0.35 + n++ * 0.09) + 's'; s.textContent = p; frag.append(s); });
+        c.replaceWith(frag);
+      } else wrapWords(c);
+    });
+    wrapWords(h);
+  }
+
+  /* Bilden för pusslet: sjörestaurangen i solnedgång (ditt eget foto) */
+  const W0 = 900, H0 = 1200, img = 'url(/img/lake-restaurant.jpg)';
+
+  /* Pusselbitar */
+  const stage = document.getElementById('stage'), tilesEl = document.getElementById('tiles'), mask = document.getElementById('mask');
+  let tiles = [];
+  function buildTiles() {
+    const Wd = stage.clientWidth, Hd = stage.clientHeight, s = Math.max(Wd / W0, Hd / H0), bw = W0 * s, bh = H0 * s, ox = (Wd - bw) / 2, oy = (Hd - bh) * 0.68; /* 0.68 = mer himmel, en del av havsdäcket syns */
+    mask.style.backgroundImage = img; mask.style.backgroundSize = bw + 'px ' + bh + 'px'; mask.style.backgroundPosition = ox + 'px ' + oy + 'px';
+    if (reduce) return;
+    const cols = Wd < 700 ? 5 : 9, rows = Wd < 700 ? 8 : 6, tw = Wd / cols, th = Hd / rows;
+    tilesEl.innerHTML = ''; tiles = []; let seed = 11; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) {
+      const d = document.createElement('div'); d.className = 'tile';
+      Object.assign(d.style, { left: k * tw + 'px', top: r * th + 'px', width: Math.ceil(tw) + 1 + 'px', height: Math.ceil(th) + 1 + 'px', backgroundImage: img, backgroundSize: bw + 'px ' + bh + 'px', backgroundPosition: (ox - k * tw) + 'px ' + (oy - r * th) + 'px' });
+      tilesEl.appendChild(d);
+      tiles.push({ el: d, s: .12 + rnd() * .36, rx: (rnd() - .5) * 140, ry: (rnd() - .5) * 140, dx: (rnd() - .5) * 260 });
+    }
+  }
+  const facts = [...document.querySelectorAll('.fact')], pzEye = document.getElementById('pzEye'), pzHint = document.getElementById('pzHint'), puzzle = document.getElementById('varfor');
+
+  /* Kunskapsbank-kort */
+  const guides = [
+    ['vad-kostar-det-att-bo-i-hua-hin', 'Vad kostar det att bo i Hua Hin?', 'Realistiska månadsbudgetar: hyra, mat, el och sjukvård.', '4 min', ['Vad olika typer av boende brukar kosta', 'El 600–900 baht för en stor tvåa', 'Många par lever bekvämt på 60 000–90 000 baht'], '#c4643c', 'coin'],
+    ['visum-i-thailand', 'Visum i Thailand', '30 dagars visumfrihet, långtidsvisum och reglerna du måste kunna.', '5 min', ['30 dagar utan visum sedan 15 september 2026', 'Så övervintrar du ett halvår', '90-dagarsrapporten och böterna'], '#2f6a6e', 'passport'],
+    ['forsta-tiden-i-hua-hin', 'Första tiden i Hua Hin', 'Det praktiska, i den ordning du gör det.', '5 min', ['SIM-kort registreras med pass och foto', 'Hemvistintyg och bankkonto', 'Moped: körkort, hjälm och registrering i Pranburi'], '#b07a1f', 'key'],
+    ['hyra-langtid-i-hua-hin', 'Hyra långtid i Hua Hin', 'Kontrakt, deposition och vad som brukar ingå.', '4 min', ['Ett års kontrakt ger lägst hyra', 'Fråga alltid: "Is it government electricity?"', 'Internet via AIS eller True, en tekniker installerar'], '#3d7a55', 'home'],
+    ['kopa-bostad-i-thailand', 'Köpa bostad i Thailand', 'Vad du som utlänning får äga och vilka varningstecken som finns.', '4 min', ['Condo i eget namn inom kvoten på 49 %', 'Pengarna ska in från utlandet, med FET-intyg', 'Skriv aldrig mark på någon annans namn'], '#7d4f86', 'building'],
+    ['traditioner-och-uppforande', 'Thailändska traditioner', 'Det som gör vardagen lättare, och som ingen säger till om.', '4 min', ['Kreng jai och att rädda ansiktet', 'Wai, huvudet och fötterna', 'Tempel, munkar och kungahuset'], '#b4473c', 'temple']
+  ];
+  const track = document.getElementById('track');
+  /* Ikoner per guide (enkla SVG-linjer) */
+  const icons = {
+    coin: '<circle cx="12" cy="12" r="9"/><path d="M9 9.5h4.5a1.8 1.8 0 0 1 0 3.6H9h5a1.8 1.8 0 0 1 0 3.6H9M10.5 7.5v11"/>',
+    passport: '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="11" r="3"/><path d="M9 17h6"/>',
+    key: '<circle cx="8" cy="15" r="4"/><path d="m11 12 8-8M16 7l2 2M14 9l2 2"/>',
+    home: '<path d="M4 11.5 12 4l8 7.5M6.5 10v10h11V10M10 20v-5h4v5"/>',
+    building: '<path d="M6 21V5l6-2 6 2v16M4 21h16M10 8h1M13 8h1M10 12h1M13 12h1M10 21v-4h4v4"/>',
+    temple: '<path d="M12 3 16.5 8h-9zM5 8h14M7 8v12M17 8v12M11 8v12h2V8M4 20h16"/>'
+  };
+  guides.forEach(([slug, title, teaser, time, points, color, icon], i) => {
+    const a = document.createElement('article'); a.className = 'kcard'; a.style.setProperty('--c', color);
+    a.innerHTML = '<div class="ktilt"><div class="kflip">' +
+      '<div class="face front"><div class="ktop"><div class="knum">0' + (i + 1) + '</div><div class="kicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + icons[icon] + '</svg></div></div><div class="kmeta">Guide<i></i>Läsetid ' + time + '</div><h3>' + title + '</h3><p>' + teaser + '</p>' +
+      '<div class="kbtns"><button class="flip-btn" type="button" aria-expanded="false">Vad tar guiden upp?</button></div></div>' +
+      '<div class="face back" aria-hidden="true"><p>Det här får du veta</p><h3>' + title + '</h3><ul>' + points.map(p => '<li>' + p + '</li>').join('') + '</ul>' +
+      '<div class="kbtns"><a class="read" href="/kunskapsbank/' + slug + '/" tabindex="-1">Läs guiden</a><button class="flip-btn" type="button" tabindex="-1">Vänd tillbaka</button></div></div>' +
+      '</div></div>';
+    track.appendChild(a);
+    const front = a.querySelector('.front'), back = a.querySelector('.back');
+    a.querySelectorAll('.flip-btn').forEach(b => b.addEventListener('click', () => {
+      const on = a.classList.toggle('flipped');
+      back.setAttribute('aria-hidden', !on); front.setAttribute('aria-hidden', on);
+      back.querySelectorAll('a,button').forEach(el => el.tabIndex = on ? 0 : -1);
+      front.querySelector('button').tabIndex = on ? -1 : 0;
+      front.querySelector('button').setAttribute('aria-expanded', on);
+      (on ? back.querySelector('.read') : front.querySelector('button')).focus({ preventScroll: true });
+    }));
+    if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      const tilt = a.querySelector('.ktilt');
+      a.addEventListener('pointermove', e => {
+        const r = a.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        tilt.style.transform = 'rotateX(' + ((.5 - y) * 14).toFixed(1) + 'deg) rotateY(' + ((x - .5) * 14).toFixed(1) + 'deg)';
+        a.querySelectorAll('.face').forEach(f => { f.style.setProperty('--gx', x * 100 + '%'); f.style.setProperty('--gy', y * 100 + '%'); f.style.setProperty('--go', 1); });
+      });
+      a.addEventListener('pointerleave', () => { tilt.style.transform = ''; a.querySelectorAll('.face').forEach(f => f.style.setProperty('--go', 0)); });
+    }
+  });
+  const kb = document.getElementById('kunskapsbank'), kbStage = document.getElementById('kbStage'), kbBig = document.getElementById('kbBig');
+
+  /* Om Cristian: orden fylls i, namnteckningen ritas, siffrorna räknar upp */
+  const omBody = document.querySelector('#om .body'), sigText = document.querySelector('#sig text'), words = [];
+  omBody.querySelectorAll('p').forEach(p => { p.innerHTML = p.textContent.split(' ').map(w => '<span class="rw">' + w + '</span>').join(' '); words.push(...p.querySelectorAll('.rw')); });
+  if (reduce) { words.forEach(w => w.classList.add('on')); sigText.style.strokeDashoffset = 0; sigText.style.fillOpacity = 1; }
+  const stats = document.getElementById('stats'), nums = [...stats.querySelectorAll('[data-n]')];
+  if (!reduce && 'IntersectionObserver' in window) {
+    nums.forEach(n => n.textContent = '0');
+    const sio = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; sio.disconnect(); const t0 = performance.now();
+      const step = t => { const k = Math.min(1, (t - t0) / 1600), ev = 1 - Math.pow(1 - k, 3); nums.forEach(n => n.textContent = Math.round(+n.dataset.n * ev)); if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step); }), { threshold: .6 });
+    sio.observe(stats);
+  }
+  if (reduce) { kb.style.setProperty('--kp', '.92'); kb.classList.add('deep'); }
+  const horiz = () => !reduce && innerWidth > 820;
+  function sizeKb() { kb.style.height = horiz() ? (track.scrollWidth - innerWidth + innerHeight * 1.15) + 'px' : ''; }
+
+  /* Processlinje */
+  const procPath = document.getElementById('procPath'), proc = document.getElementById('proc'), steps = [...document.querySelectorAll('.step')];
+  const plen = procPath.getTotalLength(); procPath.style.strokeDasharray = plen; procPath.style.strokeDashoffset = reduce ? 0 : plen;
+
+  const pscene = document.getElementById('pscene'), floats = [...pscene.querySelectorAll('.float')];
+
+  /* Scrollslinga */
+  const layers = [document.getElementById('scene')], bar = document.getElementById('bar');
+  let mx = 0, my = 0, ticking = false;
+  if (!reduce) addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; req(); }, { passive: true });
+  function frame() {
+    ticking = false;
+    const y = scrollY, vh = innerHeight, docH = document.documentElement.scrollHeight - vh;
+    bar.style.transform = 'scaleX(' + (docH > 0 ? y / docH : 0).toFixed(3) + ')';
+    if (reduce) return;
+    if (y < vh * 1.2) layers.forEach(l => { const d = +l.dataset.d, m = +l.dataset.m; l.style.transform = 'translate3d(' + (-mx * m).toFixed(1) + 'px,' + (y * d - my * m * .5).toFixed(1) + 'px,0)'; });
+    const r = puzzle.getBoundingClientRect(), p = clamp(-r.top / (r.height - vh));
+    if (r.top < vh && r.bottom > 0) {
+      tiles.forEach(t => {
+        const u = ease(clamp((p - t.s) / .14));
+        t.el.style.transform = u ? 'translate3d(' + (t.dx * u).toFixed(1) + 'px,' + (u * vh * .9).toFixed(1) + 'px,' + (u * 260).toFixed(0) + 'px) rotateX(' + (t.rx * u).toFixed(1) + 'deg) rotateY(' + (t.ry * u).toFixed(1) + 'deg)' : '';
+        t.el.style.opacity = (1 - u).toFixed(2);
+      });
+      const z = ease(clamp((p - .55) / .25));
+      mask.style.transform = 'translateY(' + (-z * vh * .1).toFixed(1) + 'px) scale(' + (1 - z * .22).toFixed(3) + ')';
+      pzEye.style.opacity = z.toFixed(2);
+      pzHint.style.opacity = p < .05 ? 1 : 0;
+      const narrow = innerWidth <= 820;
+      facts.forEach((f, i) => { const u = ease(clamp((p - .62 - i * .06) / .16)); f.style.opacity = u.toFixed(2); f.style.transform = narrow ? 'translateY(' + ((1 - u) * 60).toFixed(1) + 'px)' : 'translateX(' + ((u - 1) * 120).toFixed(1) + 'px)'; });
+    }
+    const ob = omBody.getBoundingClientRect();
+    if (ob.top < vh && ob.bottom > -vh) {
+      const wp = clamp((vh * .9 - ob.top) / (vh * .55)), k = Math.round(wp * words.length);
+      words.forEach((w, i) => w.classList.toggle('on', i < k));
+      const sg = sigText.parentNode.getBoundingClientRect(), sp = clamp((vh * .88 - sg.top) / (vh * .3)); sigText.style.strokeDashoffset = (900 * (1 - sp)).toFixed(0); sigText.style.fillOpacity = clamp((sp - .65) / .35).toFixed(2);
+    }
+    const kr = kb.getBoundingClientRect();
+    if (kr.top < vh && kr.bottom > 0) {
+      const kin = clamp((vh - kr.top) / (vh * .8));
+      kb.style.setProperty('--kp', (kin * .92).toFixed(3)); kb.classList.toggle('deep', kin > .5);
+      const kp = horiz() ? clamp(-kr.top / (kr.height - vh)) : kin;
+      kbBig.style.transform = 'translate3d(' + (40 - kp * innerWidth * .6).toFixed(1) + 'px,0,0)';
+      if (horiz()) track.style.transform = 'translate3d(' + (-kp * (track.scrollWidth - innerWidth + 40)).toFixed(1) + 'px,0,0)';
+    }
+    const sr = pscene.getBoundingClientRect();
+    if (sr.top < vh && sr.bottom > 0) { const c = sr.top + sr.height / 2 - vh / 2; floats.forEach(f => { const d = +f.dataset.depth * (innerWidth <= 820 ? .2 : 1); f.style.transform = 'translate3d(' + (mx * d * 120).toFixed(1) + 'px,' + (c * d + my * d * 80).toFixed(1) + 'px,0)'; }); }
+    const pr = proc.getBoundingClientRect(), pp = clamp((vh * .85 - pr.top) / (pr.height + vh * .2));
+    procPath.style.strokeDashoffset = (plen * (1 - pp)).toFixed(1);
+    steps.forEach((s, i) => s.classList.toggle('on', pp > .12 + i * .33));
+  }
+  function req() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  addEventListener('scroll', req, { passive: true });
+  addEventListener('resize', () => { buildTiles(); sizeKb(); req(); });
+  buildTiles(); sizeKb(); frame();
+  document.fonts && document.fonts.ready.then(() => { sizeKb(); req(); });
+  if (reduce) steps.forEach(s => s.classList.add('on'));
+
+  /* Scroll reveal + clip-path */
+  const portrait = document.getElementById('portrait');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .2 });
+    document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 0.08 + 's'; io.observe(el); });
+    /* Egen observer för porträttet: cirkeln är liten i början, så den räknas från första pixeln */
+    const pio2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { portrait.classList.add('in'); pio2.disconnect(); } }), { threshold: 0, rootMargin: '0px 0px -20% 0px' });
+    pio2.observe(portrait);
+  } else { document.querySelectorAll('.rv').forEach(el => el.classList.add('in')); portrait.classList.add('in'); }
+
+  /* WhatsApp-chatten: meddelandena kommer ett i taget när mobilen syns */
+  const phone = document.getElementById('phone'), msgs = [...document.querySelectorAll('#chat .msg')], typing = document.getElementById('typing'), waStatus = document.getElementById('waStatus'), replay = document.getElementById('replay');
+  let timers = [];
+  function playChat() {
+    timers.forEach(clearTimeout); timers = []; replay.hidden = true;
+    msgs.forEach(m => { m.classList.remove('show'); m.classList.add('gone'); });
+    let t = 400;
+    msgs.forEach((m, i) => {
+      const me = m.classList.contains('me');
+      timers.push(setTimeout(() => { typing.classList.toggle('me', me); typing.classList.add('on'); m.before(typing); if (!me) waStatus.textContent = 'skriver…'; }, t));
+      t += me ? 1100 : 1700;
+      timers.push(setTimeout(() => { typing.classList.remove('on'); waStatus.textContent = 'online'; m.classList.remove('gone'); void m.offsetWidth; m.classList.add('show'); }, t));
+      t += 900;
+    });
+    pscene.classList.remove('sent');
+    timers.push(setTimeout(() => { pscene.classList.add('sent'); }, t - 300));
+    timers.push(setTimeout(() => { replay.hidden = false; }, t + 600));
+  }
+  replay.addEventListener('click', playChat);
+  if (reduce || !('IntersectionObserver' in window)) { msgs.forEach(m => m.classList.add('show')); phone.classList.add('in'); pscene.classList.add('sent'); }
+  else {
+    const pio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { phone.classList.add('in'); playChat(); pio.disconnect(); } }), { threshold: .45 });
+    pio.observe(phone);
+  }
+
+  /* Runda WhatsApp-knappen göms vid formuläret, där det redan finns en knapp */
+  const fab = document.querySelector('.fab');
+  if ('IntersectionObserver' in window) {
+    const vis = new Set();
+    const fio = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? vis.add(e.target) : vis.delete(e.target)); fab.classList.toggle('hide', vis.size > 0); }, { threshold: .15 });
+    fio.observe(document.getElementById('kontakt')); fio.observe(document.querySelector('footer'));
+  }
+
+  /* Kontaktformulär */
+  const form = document.getElementById('form'), ferr = document.getElementById('ferr'), fok = document.getElementById('fok');
+  form.addEventListener('input', () => { ferr.hidden = true; });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = form.name.value.trim(), msg = form.msg.value.trim();
+    if (!name || !msg) { ferr.hidden = false; return; }
+    const text = encodeURIComponent('Hej Cristian! Jag heter ' + name + '. Kontakt: ' + form.contact.value.trim() + '. Jag söker: ' + msg);
+    fok.hidden = false;
+    fok.innerHTML = 'Klart att skicka. <a href="https://wa.me/66839402162?text=' + text + '" target="_blank" rel="noopener" style="color:inherit;font-weight:700">Öppna WhatsApp med ditt meddelande</a>';
+  });
+})();
+</script>
 </body>
 </html>
