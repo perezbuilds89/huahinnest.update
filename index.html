@@ -411,6 +411,10 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
   .portrait{clip-path:none}
   .js .rv{opacity:1;transform:none}
 }
+/* Signatur: Prezz med skimrande zz */
+.prezz{font-weight:800;letter-spacing:.02em;color:var(--ink)}
+.prezz .zz{background:linear-gradient(90deg,#e98b5e,#f2c46d,#2f9a96,#e98b5e);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:prezz 4s linear infinite}
+@keyframes prezz{to{background-position:300% 0}}
 </style>
 </head>
 <body>
@@ -642,7 +646,7 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
 </main>
 
 <footer>
-  <div class="wrap"><b>HuaHinNest</b><span>En svensk kontakt i Hua Hin</span><span>© 2026 HuaHinNest</span><span>Webbdesign av Prezz</span></div>
+  <div class="wrap"><b>HuaHinNest</b><span>En svensk kontakt i Hua Hin</span><span>© 2026 HuaHinNest</span><span>Webbdesign av <span class="prezz">Pre<span class="zz">zz</span></span></span></div>
   <p class="note wrap">Foto på järnvägsstationen: Unsplash.</p>
 </footer>
 
