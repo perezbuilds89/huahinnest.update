@@ -7,6 +7,10 @@
 <meta name="description" content="En svensk kontakt på plats i Hua Hin. Personlig vägledning för dig som funderar på att flytta, hyra eller köpa bostad i Thailand. Kostnadsfritt för dig som söker.">
 <meta name="author" content="HuaHinNest">
 <link rel="canonical" href="https://huahinnest.onrender.com/">
+<link rel="alternate" hreflang="sv" href="https://huahinnest.onrender.com/">
+<link rel="alternate" hreflang="en" href="https://huahinnest.onrender.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://huahinnest.onrender.com/">
+<meta property="og:locale" content="sv_SE">
 <meta property="og:title" content="HuaHinNest – Din svenska kontakt i Hua Hin">
 <meta property="og:description" content="En svensk kontakt på plats i Hua Hin. Personlig vägledning för dig som funderar på att flytta, hyra eller köpa bostad i Thailand. Kostnadsfritt för dig som söker.">
 <meta property="og:type" content="website">
@@ -69,7 +73,7 @@ a{color:inherit}
 :root[data-theme="dark"]{--gold:#d9b56c}
 @keyframes draw{to{stroke-dashoffset:0}}
 .nav{display:flex;gap:4px;margin-left:auto}
-.nav a{font-size:15px;font-weight:600;text-decoration:none;padding:9px 12px;border-radius:10px;transition:background .2s}
+.nav a{white-space:nowrap;font-size:15px;font-weight:600;text-decoration:none;padding:9px 12px;border-radius:10px;transition:background .2s}
 .nav a:hover{background:var(--glass-line)}
 .hdr-tools{display:flex;gap:8px;align-items:center}
 .icon-btn{height:42px;min-width:42px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:12px;border:1px solid var(--glass-line);background:transparent;color:inherit;font:600 14px var(--body);cursor:pointer}
@@ -79,7 +83,7 @@ a{color:inherit}
 .progress{position:absolute;left:24px;right:24px;bottom:10px;height:2px;border-radius:2px;overflow:hidden;pointer-events:none}
 .progress i{display:block;height:100%;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
 .mnav{display:none}
-@media (max-width:980px){
+@media (max-width:1160px){
   .nav{display:none}.menu-btn{display:inline-flex}.wa-btn{display:none}.hdr-tools{margin-left:auto}
   .mnav{position:absolute;top:76px;left:max(14px,env(safe-area-inset-left,0px));right:max(14px,env(safe-area-inset-right,0px));flex-direction:column;padding:10px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
   .mnav.open{display:flex}
@@ -415,6 +419,13 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
 .prezz{font-weight:800;letter-spacing:.02em;color:var(--ink)}
 .prezz .zz{background:linear-gradient(90deg,#e98b5e,#f2c46d,#2f9a96,#e98b5e);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:prezz 4s linear infinite}
 @keyframes prezz{to{background-position:300% 0}}
+/* Språkval */
+.lang{display:inline-flex;align-items:center;height:42px;padding:3px;border-radius:12px;border:1px solid var(--glass-line)}
+.lang a{min-width:38px;height:34px;display:inline-flex;align-items:center;justify-content:center;padding:0 8px;border-radius:9px;font:700 13px var(--body);letter-spacing:.06em;text-decoration:none;color:inherit;opacity:.7;transition:background .2s,opacity .2s}
+.lang a:hover{opacity:1;background:var(--glass-line)}
+.lang a[aria-current]{opacity:1;background:var(--accent);color:var(--accent-ink)}
+.mlang{display:none}
+@media (max-width:420px){.hdr-tools .lang{display:none}.mlang{display:flex;gap:8px;padding:6px 4px 12px;border-bottom:1px solid var(--glass-line)}.mlang a{flex:1;border:1px solid var(--glass-line);border-radius:12px;padding:12px;text-align:center;font-size:16px!important;border-bottom:1px solid var(--glass-line)!important}.mlang a[aria-current]{background:var(--accent);color:var(--accent-ink)!important;border-color:transparent}}
 </style>
 </head>
 <body>
@@ -433,6 +444,7 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
       <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="hdr-tools">
+      <nav class="lang" aria-label="Språk"><a href="/" lang="sv" hreflang="sv" aria-current="page">SV</a><a href="/en/" lang="en" hreflang="en">EN</a></nav>
       <button class="icon-btn" id="theme" type="button" aria-label="Byt mellan ljust och mörkt läge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         <span id="themeLabel">Mörkt</span>
@@ -445,7 +457,7 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
     <div class="progress" aria-hidden="true"><i id="bar"></i></div>
   </div>
   <nav class="mnav" id="mnav" aria-label="Mobilmeny">
-    <a href="#om">Om Cristian</a><a href="#varfor">Varför Hua Hin</a><a href="#kunskapsbank">Kunskapsbank</a><a href="#process">Så fungerar det</a><a href="#kontakt">Kontakt</a><a href="https://wa.me/66839402162" target="_blank" rel="noopener">Skriv på WhatsApp</a>
+    <div class="mlang" aria-label="Språk"><a href="/" lang="sv" hreflang="sv" aria-current="page">Svenska</a><a href="/en/" lang="en" hreflang="en">English</a></div><a href="#om">Om Cristian</a><a href="#varfor">Varför Hua Hin</a><a href="#kunskapsbank">Kunskapsbank</a><a href="#process">Så fungerar det</a><a href="#kontakt">Kontakt</a><a href="https://wa.me/66839402162" target="_blank" rel="noopener">Skriv på WhatsApp</a>
   </nav>
 </header>
 
@@ -457,7 +469,7 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
     <div class="wrap hero-in">
       <p class="eyebrow"><span id="type" data-text="En svensk kontakt i Hua Hin">En svensk kontakt i Hua Hin</span><span class="caret" aria-hidden="true"></span></p>
       <h1 id="kin">Innan du flyttar, <em>prata med någon</em> som redan bor här.</h1>
-      <p class="lead">Jag heter Cristian. Jag är svensk och bor i Hua Hin. Har du frågor om att hyra, köpa eller flytta hit, hör av dig så pratar vi.</p>
+      <p class="lead">Jag är svensk och bor i Hua Hin. Jag hjälper dig att hyra eller köpa bostad, och med andra tjänster du kan behöva här på plats.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="https://wa.me/66839402162" target="_blank" rel="noopener">Skriv några rader
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
@@ -495,7 +507,7 @@ footer b{font-family:var(--display);font-size:22px;font-weight:400;color:var(--i
       </div>
       <div>
         <p class="eyebrow rv">Om Cristian</p>
-        <h2 class="rv">Din svenska kontakt i Hua Hin.</h2>
+        <h2 class="rv">Hej, jag heter Cristian.</h2>
         <div class="body rv">
           <p>Jag är svensk och bor och arbetar i Hua Hin. Jag har daglig kontakt med både svenskar och lokala aktörer.</p>
           <p>Mitt mål är att vara den svenska kontakt jag själv hade velat ha om jag skulle flytta till Thailand.</p>
